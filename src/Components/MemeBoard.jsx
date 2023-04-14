@@ -8,6 +8,7 @@ const MemeBoard = () => {
                 <img src="" alt='meme'/>
                 <p className="inferior-text"></p>
             </figure>
+            <button type='button'>Descargar meme</button>
         </div>
     )
 }
