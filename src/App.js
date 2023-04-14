@@ -1,11 +1,9 @@
 import './App.css';
-import Cookies from './Components/Cookies';
-import Imgmeme from './Components/Imgmeme';
+import Imgmeme from './components/Imgmeme';
 
 function App() {
   return (
     <div className="App">
-      <Cookies/>
       <Imgmeme/>
     </div>
   );
