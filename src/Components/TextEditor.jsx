@@ -5,7 +5,7 @@ const TextTools = () =>{
         <div className='tools-container'>
             <div className='tool font-size'>
                 <label>Tamaño</label>
-                <input type='number'/>
+                <input type='range' min={12} max={60}/>
             </div>
             <div className='tool color'>
                 <label>Color</label>
