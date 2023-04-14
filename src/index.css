@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+
 * {
   padding: 0;
 }
@@ -10,4 +12,5 @@ html{
 
 body{
   background: none;
+  font-family: 'Chelsea Market', cursive;
 }
