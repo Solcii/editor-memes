@@ -3,7 +3,7 @@ import './MainToolsPanel.css';
 const MainToolsPanel = () =>{
     return(
         <div className='step-container'>
-            <h2 className='step-subtitle one'>PASO 1. Configuraciones básicas</h2>
+            <h2 className='step-subtitle'>PASO 1. Configuraciones básicas</h2>
             <div className="main-tool-panel step-main-container">
                 <div className='tool-container'>
                     <label className="tool-label">Fondo:</label>

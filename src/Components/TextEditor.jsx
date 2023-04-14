@@ -43,7 +43,7 @@ const TextEditor = () =>{
     const text = Array(2).fill(1)
     return(
         <div className="step-container">
-            <h2 className='step-subtitle one'>PASO 3. Añade texto a tu meme</h2>
+            <h2 className='step-subtitle'>PASO 3. Añade texto a tu meme</h2>
             <div className='step-main-container'>
                 {text.map((_, i)=>
                 <div className="text-editor-container" key={i}>

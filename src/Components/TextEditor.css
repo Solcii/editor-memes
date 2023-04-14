@@ -59,3 +59,33 @@
     font-family: 'FontAwesome';
     font-style: normal;
 }
+
+@media (max-width: 768px) {
+    .text-editor-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .text-editor-container .input-container{
+        width: 100%;
+    }
+    .text-editor-container .input-container.input_1,
+    .text-editor-container .input-container.input_2{
+        margin-bottom: 10px;
+    }
+
+    .text-editor-container .input-container.input_1 + .tools-container{
+        margin-bottom: 30px;
+    }
+    .text-editor-container .tools-container{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 455px) {
+    .text-editor-container .tools-container{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 10px;
+    }
+}
