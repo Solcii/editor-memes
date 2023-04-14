@@ -1,0 +1,39 @@
+footer{
+    background: rgba(253, 129, 56, 1);
+    background: linear-gradient(348deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px -6px 28px;
+}
+
+footer p{
+    font-size: 12px;
+    text-align: right;
+    padding-right: 10px;
+    border-right: 1px solid #fff;
+    margin-bottom: 0;
+}
+
+footer .links{
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+}
+footer a {
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+a i:hover {
+    color: black;
+    transition: .5s;
+}

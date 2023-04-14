@@ -1,5 +1,6 @@
 import './App.css';
 import AppTitle from './components/AppTitle';
+import Footer from './components/Footer';
 import ImagesList from './components/ImagesList';
 import MainToolsPanel from './components/MainToolsPanel';
 import MemeBoard from './components/MemeBoard';
@@ -14,6 +15,7 @@ function App() {
       <ImagesList/>
       <TextEditor/>
       <MemeBoard/>
+      <Footer/>
     </div>
   );
 }

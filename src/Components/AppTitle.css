@@ -1,6 +1,6 @@
- h1.title{
+h1.title{
     font-size: 40px;
-    margin: 30px 0;
+    margin-bottom: 30px;
     color: white;
     text-shadow: black 1px 0 10px;
 }
