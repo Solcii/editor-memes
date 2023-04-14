@@ -1,7 +1,7 @@
 import "./MemeBoard.css";
 import html2canvas from "html2canvas";
 
-const MemeBoard = () => {
+const MemeBoard = (props) => {
   const exportMeme = (e) => {
     html2canvas(document.querySelector("#exportable-meme")).then(function (
       canvas
@@ -18,7 +18,7 @@ const MemeBoard = () => {
     <div className="result-meme">
       <figure id="exportable-meme">
         <p className="superior-text"></p>
-        <img src="" alt="meme" />
+        {props.configs.image && <img src={props.configs.image} alt="meme" />}
         <p className="inferior-text"></p>
       </figure>
       <button type="button" onClick={exportMeme}>

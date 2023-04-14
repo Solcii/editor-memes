@@ -4,6 +4,16 @@
   margin: auto;
   background: white;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 9px 28px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.result-meme figure img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .result-meme button {
