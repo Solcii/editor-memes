@@ -1,0 +1,61 @@
+.text-editor-container .input-container{
+    display: inline-flex;
+    flex-direction: column;
+    width: calc(100% - 365px);
+    text-align: left;
+}
+.text-editor-container .input-container.input_1{
+    margin-bottom: 20px;
+}
+
+.tools-container{
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 3fr 2fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 325px;
+    margin-left: 40px;
+}
+.tools-container .tool{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tool.align div,
+.tool.position div{
+    display: flex;
+    gap: 5px;
+    margin: auto;
+}
+
+.tool input{
+    max-width: 50px;
+    margin: auto;
+}
+
+.tool label{
+    font-size: 12px;
+}
+
+.tool button{
+    border: 0;
+    background: none;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    width: 30px;
+    height: 30px;
+}
+
+.tool button:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+.tool button:hover i{
+    opacity: 0.6;
+}
+
+.tool i{
+    font-family: 'FontAwesome';
+    font-style: normal;
+}

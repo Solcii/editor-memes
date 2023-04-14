@@ -2,6 +2,7 @@ import './App.css';
 import AppTitle from './components/AppTitle';
 import ImagesList from './components/ImagesList';
 import MainToolsPanel from './components/MainToolsPanel';
+import TextEditor from './components/TextEditor';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <AppTitle/>
       <MainToolsPanel/>
       <ImagesList/>
+      <TextEditor/>
     </div>
   );
 }
