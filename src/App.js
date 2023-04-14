@@ -1,13 +1,13 @@
 import './App.css';
 import AppTitle from './components/AppTitle';
-import Imgmeme from './components/Imgmeme';
+import MainToolsPanel from './components/MainToolsPanel';
 
 
 function App() {
   return (
     <div className="App">
       <AppTitle/>
-      <Imgmeme/>
+      <MainToolsPanel/>
     </div>
   );
 }

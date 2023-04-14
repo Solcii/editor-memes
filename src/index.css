@@ -14,3 +14,16 @@ body{
   background: none;
   font-family: 'Chelsea Market', cursive;
 }
+
+.step-container{
+  padding: 20px 0;
+}
+
+.step-subtitle{
+  font-size: 20px;
+  text-align: left;
+}
+
+.step-subtitle.one{
+  color: rgba(252,176,69,1);
+}
