@@ -1,12 +1,12 @@
-figure{
-    padding: 30px;
-    background: white;
-    max-height: 500px;
-    max-width: 500px;
-    margin: auto;
+figure {
+  padding: 30px;
+  background: white;
+  max-height: 500px;
+  max-width: 500px;
+  margin: auto;
 }
 
-figure img{
-    max-width: 400px;
-    max-height: 400px;
+figure img {
+  max-width: 400px;
+  max-height: 400px;
 }

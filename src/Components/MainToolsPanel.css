@@ -1,21 +1,21 @@
-.main-tool-panel{
-    display: flex;
-    justify-content: space-around;
+.main-tool-panel {
+  display: flex;
+  justify-content: space-around;
 }
 
-.tool-container{
-    display: inline-flex;
-    gap: 10px;
-    align-items: center;
+.tool-container {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
 }
 
 @media (max-width: 500px) {
-    .main-tool-panel{
-        flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-    }
-    .tool-container{
-        justify-content: center;
-    }
+  .main-tool-panel {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .tool-container {
+    justify-content: center;
+  }
 }

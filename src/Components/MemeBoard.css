@@ -1,29 +1,34 @@
-.result-meme figure{
-    width: 500px;
-    height: 500px;
-    margin: auto;
-    background: white;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 9px 28px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+.result-meme figure {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 9px 28px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-.result-meme button{
-    border: 0;
-    border-radius: 5px;
-    padding: 10px 30px;
-    margin-top: 50px;
-    background: rgba(232, 34, 56, 1);
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 9px 28px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    transition: .5s;
+.result-meme button {
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 30px;
+  margin-top: 50px;
+  background: rgba(232, 34, 56, 1);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 9px 28px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition: 0.5s;
 }
 
-.result-meme button:hover{
-    background: linear-gradient(159deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+.result-meme button:hover {
+  background: linear-gradient(
+    159deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
 }
 
 @media (max-width: 600px) {
-    .result-meme figure{
-        width: calc(100vw - 100px);
-        height: calc(100vw - 100px);
-    }
+  .result-meme figure {
+    width: calc(100vw - 100px);
+    height: calc(100vw - 100px);
+  }
 }
