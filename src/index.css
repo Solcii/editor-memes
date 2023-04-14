@@ -22,8 +22,14 @@ body{
 .step-subtitle{
   font-size: 20px;
   text-align: left;
+  color: rgba(252,176,69,1);
+  text-shadow: black 1px 0 10px;
 }
 
-.step-subtitle.one{
-  color: rgba(252,176,69,1);
+.step-main-container{
+  padding: 10px;
+  border: 3px solid rgba(252,176,69,1);
+  border-radius: 5px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 9px 28px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
