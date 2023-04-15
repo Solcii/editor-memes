@@ -52,7 +52,7 @@ const MemeBoard = (props) => {
       }
     }
     if(props.configs.bottomText.size){
-      bottomText.style.fontSize = props.configs.bottomText.size;
+      bottomText.style.fontSize = `${props.configs.bottomText.size}px`;
     }
     if(props.configs.bottomText.color){
       bottomText.style.color = props.configs.bottomText.color;

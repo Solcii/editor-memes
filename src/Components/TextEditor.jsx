@@ -79,12 +79,12 @@ const TextEditor = (props) => {
       <h2 className="step-subtitle">PASO 3. Añade texto a tu meme</h2>
       <div className="step-main-container">
         <div className="text-editor-container">
-            <InputContainer elem={'topText'} setTextAttr={props.setTextAttr} />
-            <TextTools elem={'topText'} memeConfig={props.memeConfig} setTextAttr={props.setTextAttr}/>
+            <InputContainer elem='topText' setTextAttr={props.setTextAttr} />
+            <TextTools elem='topText' memeConfig={props.memeConfig} setTextAttr={props.setTextAttr}/>
           </div>
           <div className="text-editor-container">
-            <InputContainer elem={'bottomText'} setTextAttr={props.setTextAttr} />
-            <TextTools elem={'bottomText'} memeConfig={props.memeConfig} setTextAttr={props.setTextAttr}/>
+            <InputContainer elem='bottomText' setTextAttr={props.setTextAttr} />
+            <TextTools elem='bottomText' memeConfig={props.memeConfig} setTextAttr={props.setTextAttr}/>
           </div>
       </div>
     </div>
