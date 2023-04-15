@@ -49,9 +49,11 @@
   height: 30px;
 }
 
+.tool button.selected,
 .tool button:hover {
   background: rgba(0, 0, 0, 0.1);
 }
+.tool button.selected i,
 .tool button:hover i {
   opacity: 0.6;
 }

@@ -1,11 +1,18 @@
 import "./TextEditor.css";
+import { useState } from "react";
 
 const TextTools = (props) => {
+
+  const [selected, setSelected] = useState('center');
+
   const handleFontSize =(e)=>props.setTextAttr(props.elem, 'size', e.target.value);
 
   const handleColor = (e) => props.setTextAttr(props.elem, 'color', e.target.value);
 
-  const handleAlign = (value) => props.setTextAttr(props.elem, 'align', value);
+  const handleAlign = (event) => {
+    props.setTextAttr(props.elem, 'align', event.currentTarget.value);
+    setSelected(event.currentTarget.value);
+  };
 
   const handlePosition = (action) => props.setTextAttr(props.elem, 'position', action)
 
@@ -13,7 +20,7 @@ const TextTools = (props) => {
  
 
   return (
-    <div className="tools-container">
+    <div className={`tools-container ${props.elem}`}>
       <div className="tool font-size">
         <label>Tamaño</label>
         <input type="number" min={12} max={60} value={size} onChange={(e)=>handleFontSize(e)} />
@@ -25,13 +32,13 @@ const TextTools = (props) => {
       <div className="tool align">
         <label>Alineación</label>
         <div>
-          <button type="button" onClick={(e)=>handleAlign('left')}>
+          <button type="button" value='left' className={selected==='left' ? 'left selected' : 'left'} onClick={(e)=>handleAlign(e)}>
             <i className="fa-solid fa-align-left"></i>
           </button>
-          <button type="button" onClick={(e)=>handleAlign('center')}>
+          <button type="button" value='center' className={selected==='center' ? 'center selected' : 'center'} onClick={(e)=>handleAlign(e)}>
             <i className="fa-solid fa-align-center"></i>
           </button>
-          <button type="button" onClick={(e)=>handleAlign('right')}>
+          <button type="button" value='right' className={selected==='right' ? 'right selected' : 'right'} onClick={(e)=>handleAlign(e)}>
             <i className="fa-solid fa-align-right"></i>
           </button>
         </div>
