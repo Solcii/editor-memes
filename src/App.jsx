@@ -9,7 +9,7 @@ import React, { useState } from "react";
 
 function App() {
   const defaultConfigs = {
-    background: 'white',
+    background: 'black',
     fontFamily: 'Arial',
     image: null,
     topText: {
@@ -27,6 +27,14 @@ function App() {
   }
   const [memeConfig, setMemeConfig] = useState(defaultConfigs);
 
+  const setBackground = (code) =>{
+    setMemeConfig({...memeConfig,background:code});
+  }
+
+  const setFontFamily = (font) => {
+    setMemeConfig({...memeConfig,fontFamily:font});
+  }
+
   const setImage = (name) => {
     setMemeConfig({...memeConfig,image:name});
   }
@@ -34,7 +42,7 @@ function App() {
   return (
     <div className="App">
       <AppTitle />
-      <MainToolsPanel />
+      <MainToolsPanel setBackground={setBackground} setFontFamily={setFontFamily} />
       <ImagesList setImage={setImage} />
       <TextEditor />
       <MemeBoard configs={memeConfig} />

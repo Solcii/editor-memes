@@ -2,8 +2,11 @@ import "./MemeBoard.css";
 import html2canvas from "html2canvas";
 
 const MemeBoard = (props) => {
+
+  const meme = document.querySelector('#exportable-meme');
+
   const exportMeme = (e) => {
-    html2canvas(document.querySelector("#exportable-meme")).then(function (
+    html2canvas(meme).then(function (
       canvas
     ) {
       let img = canvas.toDataURL("memes_images/png");
@@ -13,6 +16,15 @@ const MemeBoard = (props) => {
       link.click();
     });
   };
+
+  if(meme){
+    if(props.configs.background && meme){
+      meme.style.background = props.configs.background;
+    }
+    if(props.configs.fontFamily){
+      meme.style.fontFamily = `${props.configs.fontFamily}, sans-serif`;
+    }
+  }
 
   return (
     <div className="result-meme">
