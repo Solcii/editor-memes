@@ -35,7 +35,7 @@ const MemeBoard = (props) => {
   if (meme) {
     const topText = meme.querySelector(".top-text");
     const bottomText = meme.querySelector(".bottom-text");
-    if (props.configs.background && meme) {
+    if (props.configs.background) {
       meme.style.background = props.configs.background;
     }
     if (props.configs.fontFamily) {
