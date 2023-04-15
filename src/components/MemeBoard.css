@@ -1,4 +1,4 @@
-.result-meme{
+.result-meme {
   margin-top: 30px;
 }
 .result-meme figure {
@@ -13,39 +13,39 @@
   position: relative;
 }
 
-.result-meme figure img{
+.result-meme figure img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 
-.result-meme figure p{
+.result-meme figure p {
   position: absolute;
   font-size: 12px;
   margin: 0;
   max-width: 460px;
   word-break: break-all;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
-.result-meme figure p.left{
+.result-meme figure p.left {
   left: 20px;
 }
 
-.result-meme figure p.center{
+.result-meme figure p.center {
   left: 50%;
   transform: translateX(-50%);
 }
 
-.result-meme figure p.right{
+.result-meme figure p.right {
   right: 20px;
 }
 
-.result-meme figure p.top-text{
-  top: 40px
+.result-meme figure p.top-text {
+  top: 40px;
 }
 
-.result-meme figure p.bottom-text{
+.result-meme figure p.bottom-text {
   bottom: 40px;
 }
 
@@ -69,11 +69,11 @@
   );
 }
 
-.swal2-container .swal2-title{
+.swal2-container .swal2-title {
   font-size: 20px;
   padding-top: 40px;
 }
-.swal2-container .swal2-styled.swal2-confirm{
+.swal2-container .swal2-styled.swal2-confirm {
   font-size: 15px;
   background: rgba(252, 176, 69, 1);
 }

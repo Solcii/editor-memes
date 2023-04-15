@@ -1,10 +1,11 @@
 import "./MainToolsPanel.css";
 
 const MainToolsPanel = (props) => {
+  const handleBackground = (e) =>
+    props.setGlobalConfig("background", e.target.value);
 
-  const handleBackground = (e) => props.setGlobalConfig('background', e.target.value);
-
-  const handleFontFamily = (e) => props.setGlobalConfig('fontFamily', e.target.value);
+  const handleFontFamily = (e) =>
+    props.setGlobalConfig("fontFamily", e.target.value);
 
   return (
     <div className="step-container">
@@ -12,7 +13,11 @@ const MainToolsPanel = (props) => {
       <div className="main-tool-panel step-main-container">
         <div className="tool-container">
           <label className="tool-label">Fondo:</label>
-          <input type="color" name="background-color" onChange={(e)=>handleBackground(e)}/>
+          <input
+            type="color"
+            name="background-color"
+            onChange={(e) => handleBackground(e)}
+          />
         </div>
         <div className="tool-container">
           <label className="tool-label">Letra:</label>

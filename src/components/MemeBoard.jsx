@@ -6,14 +6,14 @@ import Swal from "sweetalert2";
 const MemeBoard = (props) => {
   const meme = document.querySelector("#exportable-meme");
 
-  const HandleClick = () =>{
+  const HandleClick = () => {
     if (!meme) {
       const MySwal = withReactContent(Swal);
       MySwal.fire("¡Debes configurar tu meme primero!");
       return;
     }
-    exportMeme()
-  }
+    exportMeme();
+  };
 
   const exportMeme = () => {
     html2canvas(meme).then(function (canvas) {

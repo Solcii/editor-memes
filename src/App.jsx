@@ -9,38 +9,41 @@ import React, { useState } from "react";
 
 function App() {
   const defaultConfigs = {
-    background: 'black',
-    fontFamily: 'Arial',
+    background: "black",
+    fontFamily: "Arial",
     image: null,
     topText: {
-      text: '',
+      text: "",
       size: 12,
-      color: 'black',
-      align: 'center'
+      color: "black",
+      align: "center",
     },
     bottomText: {
-      text: '',
+      text: "",
       size: 12,
-      color: 'black',
-      align: 'center'
-    }
-  }
+      color: "black",
+      align: "center",
+    },
+  };
   const [memeConfig, setMemeConfig] = useState(defaultConfigs);
 
-  const setGlobalConfig = (attr, value) =>{
-    setMemeConfig({...memeConfig,[attr]:value})
-  }
+  const setGlobalConfig = (attr, value) => {
+    setMemeConfig({ ...memeConfig, [attr]: value });
+  };
 
-  const setTextAttr = (key, attr, value) =>{
-    setMemeConfig({...memeConfig,[key]:{...memeConfig[key], [attr]:value}});
-  }
+  const setTextAttr = (key, attr, value) => {
+    setMemeConfig({
+      ...memeConfig,
+      [key]: { ...memeConfig[key], [attr]: value },
+    });
+  };
 
   return (
     <div className="App">
       <AppTitle />
       <MainToolsPanel setGlobalConfig={setGlobalConfig} />
       <ImagesList setGlobalConfig={setGlobalConfig} />
-      <TextEditor memeConfig={memeConfig} setTextAttr={setTextAttr}/>
+      <TextEditor memeConfig={memeConfig} setTextAttr={setTextAttr} />
       <MemeBoard configs={memeConfig} />
       <Footer />
     </div>
