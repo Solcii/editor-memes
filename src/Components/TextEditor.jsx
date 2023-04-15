@@ -9,7 +9,7 @@ const TextTools = (props) => {
       </div>
       <div className="tool color">
         <label>Color</label>
-        <input type="color" />
+        <input type="color" onChange={(e)=>{props.setTextColor(e.target.value)}} />
       </div>
       <div className="tool align">
         <label>Alineación</label>
@@ -62,7 +62,9 @@ const TextEditor = (props) => {
         {text.map((_, i) => (
           <div className="text-editor-container" key={i}>
             <InputContainer index={i + 1} setText={i+1 === 1 ? props.setTopText: props.setBottomText} />
-            <TextTools index={i+1} setTextSize={i+1 === 1 ? props.setTopTextSize: props.setBottomTextSize}/>
+            <TextTools index={i+1} 
+            setTextSize={i+1 === 1 ? props.setTopTextSize: props.setBottomTextSize} 
+            setTextColor={i+1 === 1 ? props.setTopTextColor: props.setBottomTextColor}/>
           </div>
         ))}
       </div>
