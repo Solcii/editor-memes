@@ -22,6 +22,19 @@
   margin: 0;
 }
 
+.result-meme figure p.left{
+  left: 20px;
+}
+
+.result-meme figure p.center{
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.result-meme figure p.right{
+  right: 20px;
+}
+
 .result-meme figure p.top-text{
   top: 20px
 }

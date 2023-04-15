@@ -17,6 +17,13 @@ const MemeBoard = (props) => {
     });
   };
 
+  const cleanClassList = (element) =>{
+    const options = ['left', 'center', 'right']
+    options.forEach((c)=>{
+      element.classList.remove(c)
+    });
+  }
+
   if(meme){
     const topText = meme.querySelector(".top-text");
     const bottomText = meme.querySelector(".bottom-text");
@@ -33,7 +40,8 @@ const MemeBoard = (props) => {
       topText.style.color = props.configs.topText.color;
     }
     if(props.configs.topText.align){
-      topText.style.alignItems  = props.configs.topText.align;
+      cleanClassList(topText);
+      topText.classList.add(props.configs.topText.align);
     }
     if(props.configs.topText.position){
       topText.style.top = props.configs.topText.position;
@@ -45,7 +53,8 @@ const MemeBoard = (props) => {
       bottomText.style.color = props.configs.bottomText.color;
     }
     if(props.configs.bottomText.align){
-      bottomText.style.alignItems  = props.configs.bottomText.align;
+      cleanClassList(bottomText);
+      bottomText.classList.add(props.configs.bottomText.align);
     }
     if(props.configs.bottomText.position){
       bottomText.style.bottom = props.configs.bottomText.position;

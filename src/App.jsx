@@ -65,12 +65,20 @@ function App() {
     setMemeConfig({...memeConfig,bottomText:{...memeConfig.bottomText, color:code}});
   }
 
+  const setTopTextAlign = (newAlign) =>{
+    setMemeConfig({...memeConfig,topText:{...memeConfig.topText, align:newAlign}});
+  }
+
+  const setBottomTextAlign = (newAlign) =>{
+    setMemeConfig({...memeConfig,bottomText:{...memeConfig.bottomText, align:newAlign}});
+  }
+
   return (
     <div className="App">
       <AppTitle />
       <MainToolsPanel setBackground={setBackground} setFontFamily={setFontFamily} />
       <ImagesList setImage={setImage} />
-      <TextEditor setTopText={setTopText} setBottomText={setBottomText} setTopTextSize={setTopTextSize} setBottomTextSize={setBottomTextSize} setTopTextColor={setTopTextColor} setBottomTextColor={setBottomTextColor}/>
+      <TextEditor setTopText={setTopText} setBottomText={setBottomText} setTopTextSize={setTopTextSize} setBottomTextSize={setBottomTextSize} setTopTextColor={setTopTextColor} setBottomTextColor={setBottomTextColor} setTopTextAlign={setTopTextAlign} setBottomTextAlign={setBottomTextAlign}/>
       <MemeBoard configs={memeConfig} />
       <Footer />
     </div>

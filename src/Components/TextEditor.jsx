@@ -14,13 +14,13 @@ const TextTools = (props) => {
       <div className="tool align">
         <label>Alineación</label>
         <div>
-          <button type="button">
+          <button type="button" onClick={(e)=>{props.setTextAlign('left')}}>
             <i className="fa-solid fa-align-left"></i>
           </button>
-          <button type="button">
+          <button type="button" onClick={(e)=>{props.setTextAlign('center')}}>
             <i className="fa-solid fa-align-center"></i>
           </button>
-          <button type="button">
+          <button type="button" onClick={(e)=>{props.setTextAlign('right')}}>
             <i className="fa-solid fa-align-right"></i>
           </button>
         </div>
@@ -64,7 +64,8 @@ const TextEditor = (props) => {
             <InputContainer index={i + 1} setText={i+1 === 1 ? props.setTopText: props.setBottomText} />
             <TextTools index={i+1} 
             setTextSize={i+1 === 1 ? props.setTopTextSize: props.setBottomTextSize} 
-            setTextColor={i+1 === 1 ? props.setTopTextColor: props.setBottomTextColor}/>
+            setTextColor={i+1 === 1 ? props.setTopTextColor: props.setBottomTextColor}
+            setTextAlign={i+1 === 1 ? props.setTopTextAlign: props.setBottomTextAlign}/>
           </div>
         ))}
       </div>
