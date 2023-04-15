@@ -16,15 +16,13 @@ function App() {
       text: '',
       size: 12,
       color: 'black',
-      align: 'center',
-      position: 20
+      align: 'center'
     },
     bottomText: {
       text: '',
       size: 12,
       color: 'black',
-      align: 'center',
-      position: 20
+      align: 'center'
     }
   }
   const [memeConfig, setMemeConfig] = useState(defaultConfigs);

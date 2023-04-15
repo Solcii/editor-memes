@@ -1,7 +1,7 @@
 .text-editor-container .input-container {
   display: inline-flex;
   flex-direction: column;
-  width: calc(100% - 365px);
+  width: calc(100% - 280px);
   text-align: left;
 }
 .text-editor-container .input-container.input_topText {
@@ -10,11 +10,11 @@
 
 .tools-container {
   display: inline-grid;
-  grid-template-columns: 1fr 1fr 3fr 2fr;
+  grid-template-columns: 1fr 1fr 3fr;
   gap: 20px;
   justify-content: center;
   align-items: center;
-  width: 325px;
+  width: 240px;
   margin-left: 40px;
 }
 .tools-container .tool {
@@ -23,8 +23,7 @@
   justify-content: center;
 }
 
-.tool.align div,
-.tool.position div {
+.tool.align div {
   display: flex;
   gap: 5px;
   margin: auto;
@@ -76,7 +75,7 @@
     margin-bottom: 10px;
   }
 
-  .text-editor-container .input-container.input_1 + .tools-container {
+  .text-editor-container .input-container.input_topText + .tools-container {
     margin-bottom: 30px;
   }
   .text-editor-container .tools-container {
@@ -86,9 +85,6 @@
 
 @media (max-width: 455px) {
   .text-editor-container .tools-container {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
     gap: 10px;
   }
 }

@@ -14,8 +14,6 @@ const TextTools = (props) => {
     setSelected(event.currentTarget.value);
   };
 
-  const handlePosition = (action) => props.setTextAttr(props.elem, 'position', action)
-
   const size = props.memeConfig[props.elem].size
  
 
@@ -40,17 +38,6 @@ const TextTools = (props) => {
           </button>
           <button type="button" value='right' className={selected==='right' ? 'right selected' : 'right'} onClick={(e)=>handleAlign(e)}>
             <i className="fa-solid fa-align-right"></i>
-          </button>
-        </div>
-      </div>
-      <div className="tool position">
-        <label>Altura</label>
-        <div>
-          <button type="button" onClick={()=>handlePosition('up')}>
-            <i className="fa-solid fa-arrow-up"></i>
-          </button>
-          <button type="button" onClick={()=>handlePosition('down')}>
-            <i className="fa-solid fa-arrow-down"></i>
           </button>
         </div>
       </div>
