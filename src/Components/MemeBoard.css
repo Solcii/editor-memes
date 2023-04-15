@@ -69,6 +69,15 @@
   );
 }
 
+.swal2-container .swal2-title{
+  font-size: 20px;
+  padding-top: 40px;
+}
+.swal2-container .swal2-styled.swal2-confirm{
+  font-size: 15px;
+  background: rgba(252, 176, 69, 1);
+}
+
 @media (max-width: 600px) {
   .result-meme figure {
     width: calc(100vw - 100px);
