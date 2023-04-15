@@ -17,14 +17,14 @@ function App() {
       size: 12,
       color: 'black',
       align: 'center',
-      position: 10
+      position: 20
     },
     bottomText: {
       text: '',
       size: 12,
       color: 'black',
       align: 'center',
-      position: 10
+      position: 20
     }
   }
   const [memeConfig, setMemeConfig] = useState(defaultConfigs);
@@ -73,12 +73,20 @@ function App() {
     setMemeConfig({...memeConfig,bottomText:{...memeConfig.bottomText, align:newAlign}});
   }
 
+  const setTopTextPosition = (top) =>{
+    setMemeConfig({...memeConfig,topText:{...memeConfig.topText, position:top}});
+  }
+
+  const setBottomTextPosition = (bottom) =>{
+    setMemeConfig({...memeConfig,bottomText:{...memeConfig.bottomText, position:bottom}});
+  }
+
   return (
     <div className="App">
       <AppTitle />
       <MainToolsPanel setBackground={setBackground} setFontFamily={setFontFamily} />
       <ImagesList setImage={setImage} />
-      <TextEditor setTopText={setTopText} setBottomText={setBottomText} setTopTextSize={setTopTextSize} setBottomTextSize={setBottomTextSize} setTopTextColor={setTopTextColor} setBottomTextColor={setBottomTextColor} setTopTextAlign={setTopTextAlign} setBottomTextAlign={setBottomTextAlign}/>
+      <TextEditor setTopText={setTopText} setBottomText={setBottomText} setTopTextSize={setTopTextSize} setBottomTextSize={setBottomTextSize} setTopTextColor={setTopTextColor} setBottomTextColor={setBottomTextColor} setTopTextAlign={setTopTextAlign} setBottomTextAlign={setBottomTextAlign} setTopTextPosition={setTopTextPosition} setBottomTextPosition={setBottomTextPosition}/>
       <MemeBoard configs={memeConfig} />
       <Footer />
     </div>

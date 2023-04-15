@@ -28,10 +28,10 @@ const TextTools = (props) => {
       <div className="tool position">
         <label>Altura</label>
         <div>
-          <button type="button">
+          <button type="button" onClick={()=>{props.setTextPosition('up')}}>
             <i className="fa-solid fa-arrow-up"></i>
           </button>
-          <button type="button">
+          <button type="button" onClick={()=>{props.setTextPosition('down')}}>
             <i className="fa-solid fa-arrow-down"></i>
           </button>
         </div>
@@ -65,7 +65,8 @@ const TextEditor = (props) => {
             <TextTools index={i+1} 
             setTextSize={i+1 === 1 ? props.setTopTextSize: props.setBottomTextSize} 
             setTextColor={i+1 === 1 ? props.setTopTextColor: props.setBottomTextColor}
-            setTextAlign={i+1 === 1 ? props.setTopTextAlign: props.setBottomTextAlign}/>
+            setTextAlign={i+1 === 1 ? props.setTopTextAlign: props.setBottomTextAlign}
+            setTextPosition={i+1 === 1 ? props.setTopTextPosition: props.setBottomTextPosition}/>
           </div>
         ))}
       </div>

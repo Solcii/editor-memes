@@ -44,7 +44,12 @@ const MemeBoard = (props) => {
       topText.classList.add(props.configs.topText.align);
     }
     if(props.configs.topText.position){
-      topText.style.top = props.configs.topText.position;
+      let currentTop = topText.offsetTop || 20;
+      if(props.configs.topText.position === 'up' && currentTop > 8){
+        topText.style.top = `${currentTop-1}px`;
+      } else if(props.configs.topText.position === 'down' && currentTop < 250){
+        topText.style.top = `${currentTop+1}px`;
+      }
     }
     if(props.configs.bottomText.size){
       bottomText.style.fontSize = props.configs.bottomText.size;
@@ -55,9 +60,6 @@ const MemeBoard = (props) => {
     if(props.configs.bottomText.align){
       cleanClassList(bottomText);
       bottomText.classList.add(props.configs.bottomText.align);
-    }
-    if(props.configs.bottomText.position){
-      bottomText.style.bottom = props.configs.bottomText.position;
     }
   }
 
