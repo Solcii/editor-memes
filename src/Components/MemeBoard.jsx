@@ -34,7 +34,7 @@ const MemeBoard = (props) => {
       meme.style.fontFamily = `${props.configs.fontFamily}, sans-serif`;
     }
     if(props.configs.topText.size){
-      topText.style.fontSize = props.configs.topText.size;
+      topText.style.fontSize = `${props.configs.topText.size}px`;
     }
     if(props.configs.topText.color){
       topText.style.color = props.configs.topText.color;

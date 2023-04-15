@@ -42,7 +42,7 @@ function App() {
       <AppTitle />
       <MainToolsPanel setGlobalConfig={setGlobalConfig} />
       <ImagesList setGlobalConfig={setGlobalConfig} />
-      <TextEditor setTextAttr={setTextAttr}/>
+      <TextEditor memeConfig={memeConfig} setTextAttr={setTextAttr}/>
       <MemeBoard configs={memeConfig} />
       <Footer />
     </div>

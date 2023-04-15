@@ -1,7 +1,7 @@
 import "./TextEditor.css";
 
 const TextTools = (props) => {
-  const handleFontSize =(e)=>props.setTextAttr(props.elem, 'size', `${e.target.value}px`);
+  const handleFontSize =(e)=>props.setTextAttr(props.elem, 'size', e.target.value);
 
   const handleColor = (e) => props.setTextAttr(props.elem, 'color', e.target.value);
 
@@ -9,11 +9,14 @@ const TextTools = (props) => {
 
   const handlePosition = (action) => props.setTextAttr(props.elem, 'position', action)
 
+  const size = props.memeConfig[props.elem].size
+ 
+
   return (
     <div className="tools-container">
       <div className="tool font-size">
         <label>Tamaño</label>
-        <input type="range" min={12} max={60} onChange={(e)=>handleFontSize(e)} />
+        <input type="number" min={12} max={60} value={size} onChange={(e)=>handleFontSize(e)} />
       </div>
       <div className="tool color">
         <label>Color</label>
@@ -70,11 +73,11 @@ const TextEditor = (props) => {
       <div className="step-main-container">
         <div className="text-editor-container">
             <InputContainer elem={'topText'} setTextAttr={props.setTextAttr} />
-            <TextTools elem={'topText'} setTextAttr={props.setTextAttr}/>
+            <TextTools elem={'topText'} memeConfig={props.memeConfig} setTextAttr={props.setTextAttr}/>
           </div>
           <div className="text-editor-container">
             <InputContainer elem={'bottomText'} setTextAttr={props.setTextAttr} />
-            <TextTools elem={'bottomText'} setTextAttr={props.setTextAttr}/>
+            <TextTools elem={'bottomText'} memeConfig={props.memeConfig} setTextAttr={props.setTextAttr}/>
           </div>
       </div>
     </div>
