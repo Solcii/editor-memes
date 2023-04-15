@@ -48,12 +48,12 @@ const InputContainer = (props) => {
       ) : (
         <label>Inserte su texto inferior:</label>
       )}
-      <input type="text" />
+      <input type="text" onChange={(e)=>{props.setTopText(e.target.value)}} />
     </div>
   );
 };
 
-const TextEditor = () => {
+const TextEditor = (props) => {
   const text = Array(2).fill(1);
   return (
     <div className="step-container">
@@ -61,7 +61,7 @@ const TextEditor = () => {
       <div className="step-main-container">
         {text.map((_, i) => (
           <div className="text-editor-container" key={i}>
-            <InputContainer index={i + 1} />
+            <InputContainer index={i + 1} setTopText={props.setTopText} />
             <TextTools />
           </div>
         ))}

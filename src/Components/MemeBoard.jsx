@@ -29,9 +29,9 @@ const MemeBoard = (props) => {
   return (
     <div className="result-meme">
       <figure id="exportable-meme">
-        <p className="superior-text"></p>
+        <p className="top-text">{props.configs.topText.text}</p>
         {props.configs.image && <img src={props.configs.image} alt="meme" />}
-        <p className="inferior-text"></p>
+        <p className="bottom-text"></p>
       </figure>
       <button type="button" onClick={exportMeme}>
         Descargar meme

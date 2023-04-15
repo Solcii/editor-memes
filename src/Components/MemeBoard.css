@@ -16,6 +16,12 @@
   object-fit: contain;
 }
 
+.result-meme figure .top-text{
+  position: absolute;
+  top: 20px;
+  font-size: 12px;
+}
+
 .result-meme button {
   border: 0;
   border-radius: 5px;

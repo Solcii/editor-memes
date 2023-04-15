@@ -13,12 +13,14 @@ function App() {
     fontFamily: 'Arial',
     image: null,
     topText: {
+      text: '',
       size: 12,
       color: 'black',
       align: 'center',
       position: 10
     },
     bottomText: {
+      text: '',
       size: 12,
       color: 'black',
       align: 'center',
@@ -39,12 +41,16 @@ function App() {
     setMemeConfig({...memeConfig,image:name});
   }
 
+  const setTopText = (value) =>{
+    setMemeConfig({...memeConfig,topText:{...memeConfig.topText, text:value}});
+  }
+
   return (
     <div className="App">
       <AppTitle />
       <MainToolsPanel setBackground={setBackground} setFontFamily={setFontFamily} />
       <ImagesList setImage={setImage} />
-      <TextEditor />
+      <TextEditor setTopText={setTopText} />
       <MemeBoard configs={memeConfig} />
       <Footer />
     </div>
