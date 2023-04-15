@@ -45,12 +45,16 @@ function App() {
     setMemeConfig({...memeConfig,topText:{...memeConfig.topText, text:value}});
   }
 
+  const setBottomText = (value) =>{
+    setMemeConfig({...memeConfig,bottomText:{...memeConfig.bottomText, text:value}});
+  }
+
   return (
     <div className="App">
       <AppTitle />
       <MainToolsPanel setBackground={setBackground} setFontFamily={setFontFamily} />
       <ImagesList setImage={setImage} />
-      <TextEditor setTopText={setTopText} />
+      <TextEditor setTopText={setTopText} setBottomText={setBottomText} />
       <MemeBoard configs={memeConfig} />
       <Footer />
     </div>
