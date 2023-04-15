@@ -29,64 +29,20 @@ function App() {
   }
   const [memeConfig, setMemeConfig] = useState(defaultConfigs);
 
-  const setBackground = (code) =>{
-    setMemeConfig({...memeConfig,background:code});
+  const setGlobalConfig = (attr, value) =>{
+    setMemeConfig({...memeConfig,[attr]:value})
   }
 
-  const setFontFamily = (font) => {
-    setMemeConfig({...memeConfig,fontFamily:font});
-  }
-
-  const setImage = (name) => {
-    setMemeConfig({...memeConfig,image:name});
-  }
-
-  const setTopText = (value) =>{
-    setMemeConfig({...memeConfig,topText:{...memeConfig.topText, text:value}});
-  }
-
-  const setBottomText = (value) =>{
-    setMemeConfig({...memeConfig,bottomText:{...memeConfig.bottomText, text:value}});
-  }
-
-  const setTopTextSize = (fsize) =>{
-    setMemeConfig({...memeConfig,topText:{...memeConfig.topText, size:fsize}});
-  }
-
-  const setBottomTextSize = (fsize) =>{
-    setMemeConfig({...memeConfig,bottomText:{...memeConfig.bottomText, size:fsize}});
-  }
-
-  const setTopTextColor = (code) =>{
-    setMemeConfig({...memeConfig,topText:{...memeConfig.topText, color:code}});
-  }
-
-  const setBottomTextColor = (code) =>{
-    setMemeConfig({...memeConfig,bottomText:{...memeConfig.bottomText, color:code}});
-  }
-
-  const setTopTextAlign = (newAlign) =>{
-    setMemeConfig({...memeConfig,topText:{...memeConfig.topText, align:newAlign}});
-  }
-
-  const setBottomTextAlign = (newAlign) =>{
-    setMemeConfig({...memeConfig,bottomText:{...memeConfig.bottomText, align:newAlign}});
-  }
-
-  const setTopTextPosition = (top) =>{
-    setMemeConfig({...memeConfig,topText:{...memeConfig.topText, position:top}});
-  }
-
-  const setBottomTextPosition = (bottom) =>{
-    setMemeConfig({...memeConfig,bottomText:{...memeConfig.bottomText, position:bottom}});
+  const setTextAttr = (key, attr, value) =>{
+    setMemeConfig({...memeConfig,[key]:{...memeConfig[key], [attr]:value}});
   }
 
   return (
     <div className="App">
       <AppTitle />
-      <MainToolsPanel setBackground={setBackground} setFontFamily={setFontFamily} />
-      <ImagesList setImage={setImage} />
-      <TextEditor setTopText={setTopText} setBottomText={setBottomText} setTopTextSize={setTopTextSize} setBottomTextSize={setBottomTextSize} setTopTextColor={setTopTextColor} setBottomTextColor={setBottomTextColor} setTopTextAlign={setTopTextAlign} setBottomTextAlign={setBottomTextAlign} setTopTextPosition={setTopTextPosition} setBottomTextPosition={setBottomTextPosition}/>
+      <MainToolsPanel setGlobalConfig={setGlobalConfig} />
+      <ImagesList setGlobalConfig={setGlobalConfig} />
+      <TextEditor setTextAttr={setTextAttr}/>
       <MemeBoard configs={memeConfig} />
       <Footer />
     </div>

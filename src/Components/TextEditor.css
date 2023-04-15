@@ -4,7 +4,7 @@
   width: calc(100% - 365px);
   text-align: left;
 }
-.text-editor-container .input-container.input_1 {
+.text-editor-container .input-container.input_topText {
   margin-bottom: 20px;
 }
 
@@ -69,8 +69,8 @@
   .text-editor-container .input-container {
     width: 100%;
   }
-  .text-editor-container .input-container.input_1,
-  .text-editor-container .input-container.input_2 {
+  .text-editor-container .input-container.input_topText,
+  .text-editor-container .input-container.input_bottomText {
     margin-bottom: 10px;
   }
 
