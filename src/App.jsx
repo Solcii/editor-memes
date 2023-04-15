@@ -49,12 +49,20 @@ function App() {
     setMemeConfig({...memeConfig,bottomText:{...memeConfig.bottomText, text:value}});
   }
 
+  const setTopTextSize = (fsize) =>{
+    setMemeConfig({...memeConfig,topText:{...memeConfig.topText, size:fsize}});
+  }
+
+  const setBottomTextSize = (fsize) =>{
+    setMemeConfig({...memeConfig,bottomText:{...memeConfig.bottomText, size:fsize}});
+  }
+
   return (
     <div className="App">
       <AppTitle />
       <MainToolsPanel setBackground={setBackground} setFontFamily={setFontFamily} />
       <ImagesList setImage={setImage} />
-      <TextEditor setTopText={setTopText} setBottomText={setBottomText} />
+      <TextEditor setTopText={setTopText} setBottomText={setBottomText} setTopTextSize={setTopTextSize} setBottomTextSize={setBottomTextSize} />
       <MemeBoard configs={memeConfig} />
       <Footer />
     </div>

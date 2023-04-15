@@ -16,10 +16,18 @@
   object-fit: contain;
 }
 
-.result-meme figure .top-text{
+.result-meme figure p{
   position: absolute;
-  top: 20px;
   font-size: 12px;
+  margin: 0;
+}
+
+.result-meme figure p.top-text{
+  top: 20px
+}
+
+.result-meme figure p.bottom-text{
+  bottom: 20px;
 }
 
 .result-meme button {

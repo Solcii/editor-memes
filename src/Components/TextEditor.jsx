@@ -1,11 +1,11 @@
 import "./TextEditor.css";
 
-const TextTools = () => {
+const TextTools = (props) => {
   return (
     <div className="tools-container">
       <div className="tool font-size">
         <label>Tamaño</label>
-        <input type="range" min={12} max={60} />
+        <input type="range" min={12} max={60} onChange={(e)=>{props.setTextSize(`${e.target.value}px`)}} />
       </div>
       <div className="tool color">
         <label>Color</label>
@@ -48,7 +48,7 @@ const InputContainer = (props) => {
       ) : (
         <label>Inserte su texto inferior:</label>
       )}
-      <input type="text" onChange={(e)=>{props.setTopText(e.target.value)}} />
+      <input type="text" onChange={(e)=>{props.setText(e.target.value)}} />
     </div>
   );
 };
@@ -61,8 +61,8 @@ const TextEditor = (props) => {
       <div className="step-main-container">
         {text.map((_, i) => (
           <div className="text-editor-container" key={i}>
-            <InputContainer index={i + 1} setTopText={props.setTopText} />
-            <TextTools />
+            <InputContainer index={i + 1} setText={i+1 === 1 ? props.setTopText: props.setBottomText} />
+            <TextTools index={i+1} setTextSize={i+1 === 1 ? props.setTopTextSize: props.setBottomTextSize}/>
           </div>
         ))}
       </div>
